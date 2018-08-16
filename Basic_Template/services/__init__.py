@@ -1,10 +1,10 @@
 registry = {
     'basic_service_one': {
-        'jsonrpc': 7002,
-        'snetd': 7000,
+        'jsonrpc': 7010,
+        'snetd': 7010,
     },
     'basic_service_two': {
-        'jsonrpc': 7003,
-        'snetd': 7001,
+        'jsonrpc': 7011,
+        'snetd': 7011,
     },
 }
