@@ -36,8 +36,8 @@ class VoteClassifier(ClassifierI):
         return conf
 
 
-short_pos = open("corpus/imdb/pos/corpus.txt", "r").read().decode("ascii")
-short_neg = open("corpus/imdb/neg/corpus.txt", "r").read().decode("ascii")
+short_pos = open("corpus/imdb/pos/corpus.txt", "r", encoding="utf-8").read()
+short_neg = open("corpus/imdb/neg/corpus.txt", "r", encoding="utf-8").read()
 
 documents = []
 
