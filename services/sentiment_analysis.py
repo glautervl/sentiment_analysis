@@ -4,6 +4,7 @@ import os
 import logging
 import base64
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import sentiment_mod as sent_mod
 from aiohttp import web
 from jsonrpcserver.aio import methods
 from jsonrpcserver.exceptions import InvalidParams
@@ -55,6 +56,9 @@ async def simple_analysis(**kwargs):
     for line in tempDatabase:
         if line is not None:
             if len(line) > 1:
+
+                print(sent_mod.sentiment(line))
+
                 file.write(line)
                 file.write("\n")
                 file.write(str(analizer.polarity_scores(line)))
@@ -126,7 +130,7 @@ async def double_analisys(**kwargs):
     return {'result': str(tempStr)}
 
 
-# No needed de use again
+# No needed to use again
 # Used only on time for generate new corpus from imdb
 @methods.add
 async def compile_db(**kwargs):
@@ -148,7 +152,7 @@ async def compile_db(**kwargs):
     return {'result': "RODOU COMPILE"}
 
 
-# No needed de use again
+# No needed to use again
 # Used only on time for generate positive/negative corpus from imdb
 @methods.add
 async def compile_sentiment_data(**kwargs):
