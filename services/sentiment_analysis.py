@@ -1,10 +1,9 @@
 import sys
-import glob
+import sentiment_mod as sent_mod
 import os
 import logging
 import base64
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-import sentiment_mod as sent_mod
 from aiohttp import web
 from jsonrpcserver.aio import methods
 from jsonrpcserver.exceptions import InvalidParams
@@ -16,10 +15,11 @@ log = logging.getLogger('Log: sentiment_analysis')
 
 
 #
-# inputData json-rpc method
+# simple sentiment analysis
+# usgin Vade Classifier
 #
 @methods.add
-async def simple_analysis(**kwargs):
+async def sentiment_intensity_analyzer(**kwargs):
 
     analizer = SentimentIntensityAnalyzer()
 
@@ -44,9 +44,6 @@ async def simple_analysis(**kwargs):
             if len(line) > 1:
                 tempDatabase.append(line)
 
-    # print("Total od sentences: " + str(len(tempDatabase)))
-    # print(tempDatabase[0])
-
     if inputData is None:
         raise InvalidParams('"inputData" is required')
 
@@ -56,11 +53,9 @@ async def simple_analysis(**kwargs):
     for line in tempDatabase:
         if line is not None:
             if len(line) > 1:
-
-                print(sent_mod.sentiment(line))
-
                 file.write(line)
                 file.write("\n")
+                print(str(analizer.polarity_scores(line)))
                 file.write(str(analizer.polarity_scores(line)))
                 file.write("\n\n")
 
@@ -75,15 +70,17 @@ async def simple_analysis(**kwargs):
 
 
 #
-# inputData json-rpc method
+# complex sentiment analysis
+# usgin Vade Classifier
 #
 @methods.add
-async def double_analisys(**kwargs):
-
-    analizer = SentimentIntensityAnalyzer()
+async def complex_analysis(**kwargs):
 
     # Read parameter "data"
     inputData = kwargs.get("data", None)
+
+    if inputData is None:
+        raise InvalidParams('"data" is required')
 
     text = base64.b64decode(inputData)
     # log.debug(f"add({inputData})")
@@ -103,11 +100,60 @@ async def double_analisys(**kwargs):
             if len(line) > 1:
                 tempDatabase.append(line)
 
-    # print("Total od sentences: " + str(len(tempDatabase)))
-    # print(tempDatabase[0])
+    # Generate output file
+    file = open("./output/output.txt", "w")
+
+    for line in tempDatabase:
+        if line is not None:
+            if len(line) > 1:
+                file.write(line)
+                file.write("\n")
+                # print(str(sent_mod.sentiment(line)))
+                file.write(str(sent_mod.sentiment(line)))
+                file.write("\n\n")
+
+    file.close()
+
+    # Reading file
+    fo = open("./output/output.txt", "r")
+    tempStr = base64.b64encode(str(fo.read()).encode('utf-8'))
+    fo.close()
+
+    return {'result': str(tempStr)}
+
+
+#
+# custom_corpus_sentiment_analysis
+# usgin Vade Classifier
+#
+@methods.add
+async def custom_corpus_sentiment_analysis(**kwargs):
+
+    analizer = SentimentIntensityAnalyzer()
+
+    # Read parameter "data"
+    inputData = kwargs.get("data", None)
 
     if inputData is None:
-        raise InvalidParams('"inputData" is required')
+        raise InvalidParams('"data" is required')
+
+    text = base64.b64decode(inputData)
+    # log.debug(f"add({inputData})")
+
+    # Decode do string
+    temp = text.decode('utf-8')
+
+    # Convert in array
+    tempArray = temp.split("\n")
+
+    # Declare new array of sentences
+    tempDatabase = []
+
+    #Generating temp database
+    for line in tempArray:
+        if line is not None:
+            if len(line) > 1:
+                tempDatabase.append(line)
 
     # Generate output file
     file = open("./output/output.txt", "w")
@@ -117,7 +163,7 @@ async def double_analisys(**kwargs):
             if len(line) > 1:
                 file.write(line)
                 file.write("\n")
-                file.write(str(analizer.polarity_scores(line)))
+                file.write(str(sent_mod.sentiment(line)))
                 file.write("\n\n")
 
     file.close()

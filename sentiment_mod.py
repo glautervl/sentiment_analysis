@@ -1,16 +1,10 @@
-import nltk
-import random
-#from nltk.corpus import movie_reviews
-#from nltk.classify.scikitlearn import SklearnClassifier
 import pickle
-# from sklearn.naive_bayes import MultinomialNB, BernoulliNB
-# from sklearn.linear_model import LogisticRegression, SGDClassifier
-# from sklearn.svm import SVC, LinearSVC, NuSVC
 from nltk.classify import ClassifierI
 from statistics import mode
 from nltk.tokenize import word_tokenize
 
 
+# Vote by classifiers results
 class VoteClassifier(ClassifierI):
     def __init__(self, *classifiers):
         self._classifiers = classifiers
@@ -23,24 +17,35 @@ class VoteClassifier(ClassifierI):
         return mode(votes)
 
     def confidence(self, features):
+
+        # print("FEATURES")
+        # print(str(features))
+
         votes = []
         for c in self._classifiers:
             v = c.classify(features)
             votes.append(v)
 
-        choice_votes = votes.count(mode(votes))
-        conf = choice_votes / len(votes)
+        print("")
+        print("=========================================================================")
+        print("")
+        print("TOTAL OF VOTES => " + str(len(votes)) + ", OPENED VOTES => " + str(votes))
+        print("")
+        print("WINNER VOTE => " + str(mode(votes)) + ", TOTAL OF VOTES => " + str(votes.count(mode(votes))))
+        print("")
+        print("=========================================================================")
+        print("")
+        total_of_winner_votes = votes.count(mode(votes))
+        conf = total_of_winner_votes / len(votes)
         return conf
 
-documents_f = open("models/documents.pickle", "rb")
-documents = pickle.load(documents_f)
-documents_f.close()
 
 word_features5k_f = open("models/word_features5k.pickle", "rb")
 word_features = pickle.load(word_features5k_f)
 word_features5k_f.close()
 
 
+# Tokenizing document
 def find_features(document):
     words = word_tokenize(document)
     features = {}
@@ -50,18 +55,9 @@ def find_features(document):
     return features
 
 
-featuresets_f = open("models/featuresets.pickle", "rb")
-featuresets = pickle.load(featuresets_f)
-featuresets_f.close()
-
-random.shuffle(featuresets)
-print(len(featuresets))
-
-testing_set = featuresets[10000:]
-training_set = featuresets[:10000]
-
+# Fetching trained classifieds
 open_file = open("models/originalnaivebayes5k.pickle", "rb")
-classifier = pickle.load(open_file)
+NBlassifier = pickle.load(open_file)
 open_file.close()
 
 open_file = open("models/MNB_classifier5k.pickle", "rb")
@@ -80,18 +76,29 @@ open_file = open("models/LinearSVC_classifier5k.pickle", "rb")
 LinearSVC_classifier = pickle.load(open_file)
 open_file.close()
 
+# ATTENTION ###
+open_file = open("models/NuSVC_classifier5k.pickle", "rb")
+NuSVC_classifier = pickle.load(open_file)
+open_file.close()
+
 open_file = open("models/SGDC_classifier5k.pickle", "rb")
 SGDC_classifier = pickle.load(open_file)
 open_file.close()
 
 voted_classifier = VoteClassifier(
-                                  classifier,
-                                  LinearSVC_classifier,
+                                  NBlassifier,
                                   MNB_classifier,
                                   BernoulliNB_classifier,
-                                  LogisticRegression_classifier)
+                                  LogisticRegression_classifier,
+                                  LinearSVC_classifier,
+                                  NuSVC_classifier,
+                                  SGDC_classifier
+                                  )
 
 
+# Classify sentiment
 def sentiment(text):
+    print("TEXT")
+    print(text)
     feats = find_features(text)
-    return voted_classifier.classify(feats),voted_classifier.confidence(feats)
+    return voted_classifier.classify(feats), voted_classifier.confidence(feats)
