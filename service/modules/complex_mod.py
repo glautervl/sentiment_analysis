@@ -1,7 +1,11 @@
+import os
 import pickle
 from nltk.classify import ClassifierI
 from statistics import mode
 from nltk.tokenize import word_tokenize
+
+#Current script path
+current_path = os.path.dirname(__file__)
 
 
 # Vote by classifiers results
@@ -40,7 +44,8 @@ class VoteClassifier(ClassifierI):
         return conf
 
 
-word_features5k_f = open("models/word_features5k.pickle", "rb")
+# word_features5k_f = open("models/word_features5k.pickle", "rb")
+word_features5k_f = open(os.path.join(current_path, "models/word_features5k.pickle"), "rb")
 word_features = pickle.load(word_features5k_f)
 word_features5k_f.close()
 
@@ -56,32 +61,32 @@ def find_features(document):
 
 
 # Fetching trained classifieds
-open_file = open("models/NaiveBayes_classifier5k.pickle", "rb")
+open_file = open(os.path.join(current_path, "models/NaiveBayes_classifier5k.pickle"), "rb")
 NBlassifier = pickle.load(open_file)
 open_file.close()
 
-open_file = open("models/MNB_classifier5k.pickle", "rb")
+open_file = open(os.path.join(current_path, "models/MNB_classifier5k.pickle"), "rb")
 MNB_classifier = pickle.load(open_file)
 open_file.close()
 
-open_file = open("models/BernoulliNB_classifier5k.pickle", "rb")
+open_file = open(os.path.join(current_path, "models/BernoulliNB_classifier5k.pickle"), "rb")
 BernoulliNB_classifier = pickle.load(open_file)
 open_file.close()
 
-open_file = open("models/LogisticRegression_classifier5k.pickle", "rb")
+open_file = open(os.path.join(current_path, "models/LogisticRegression_classifier5k.pickle"), "rb")
 LogisticRegression_classifier = pickle.load(open_file)
 open_file.close()
 
-open_file = open("models/LinearSVC_classifier5k.pickle", "rb")
+open_file = open(os.path.join(current_path, "models/LinearSVC_classifier5k.pickle"), "rb")
 LinearSVC_classifier = pickle.load(open_file)
 open_file.close()
 
 # ATTENTION ###
-open_file = open("models/NuSVC_classifier5k.pickle", "rb")
+open_file = open(os.path.join(current_path, "models/NuSVC_classifier5k.pickle"), "rb")
 NuSVC_classifier = pickle.load(open_file)
 open_file.close()
 
-open_file = open("models/SGDC_classifier5k.pickle", "rb")
+open_file = open(os.path.join(current_path, "models/SGDC_classifier5k.pickle"), "rb")
 SGDC_classifier = pickle.load(open_file)
 open_file.close()
 
