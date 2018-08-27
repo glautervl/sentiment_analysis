@@ -6,8 +6,8 @@ import grpc
 import concurrent.futures as futures
 import service.common
 from nltk.sentiment import SentimentIntensityAnalyzer
-from service.module import complex_mod
-from service.module import twitter_mod
+from service.modules import complex_mod
+from service.modules import twitter_mod
 
 
 # Importing the generated codes from buildproto.sh

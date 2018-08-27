@@ -315,7 +315,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Nosetests in test_call_basic_service.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+    <configuration name="Nosetests in /Users/glauterlemos/Documents/DESENVOLVIMENTO/SINGULARITY_NET/PROJECT/services/sentiment_analysis/test_call_basic_service.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <module name="sentiment_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -334,12 +334,12 @@
     <list>
       <item itemvalue="Bash.buildproto.sh" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python tests.Nosetests in test_call_basic_service.py" />
+      <item itemvalue="Python tests.Nosetests in /Users/glauterlemos/Documents/DESENVOLVIMENTO/SINGULARITY_NET/PROJECT/services/sentiment_analysis/test_call_basic_service.py" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Bash.buildproto.sh" />
-        <item itemvalue="Python tests.Nosetests in test_call_basic_service.py" />
+        <item itemvalue="Python tests.Nosetests in /Users/glauterlemos/Documents/DESENVOLVIMENTO/SINGULARITY_NET/PROJECT/services/sentiment_analysis/test_call_basic_service.py" />
         <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
