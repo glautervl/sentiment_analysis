@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+message InputMessage {
+    string value = 1;
+}
+
+message OutputMessage {
+    string value = 1;
+}
+
+service ShowMessage {
+    rpc show(InputMessage) returns (OutputMessage) {}
+}
+
+service SentimentIntensityAnalysis {
+    rpc intensivityAnalysis(InputMessage) returns (OutputMessage) {}
+}
+
+service SentimentComplexAnalysis {
+    rpc complexAnalysis(InputMessage) returns (OutputMessage) {}
+}
+
+service CustomCorpusAnalysis {
+    rpc customCorpusAnalysis(InputMessage) returns (OutputMessage) {}
+}
+
+service TwitterAnalysis {
+    rpc twitterAnalysis(InputMessage) returns (OutputMessage) {}
+}
+
+service TrainData {
+    rpc train(InputMessage) returns (OutputMessage) {}
+}
