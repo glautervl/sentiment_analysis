@@ -7,7 +7,7 @@ import argparse
 import logging
 import threading
 
-from services import registry
+from JSON_RPC.services import registry
 
 logging.basicConfig(
     level=10, format="%(asctime)s - [%(levelname)8s] - %(name)s - %(message)s")

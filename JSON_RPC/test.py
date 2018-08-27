@@ -1,5 +1,5 @@
 import jsonrpcclient
-from services import registry
+from JSON_RPC.services import registry
 
 if __name__ == '__main__':
 

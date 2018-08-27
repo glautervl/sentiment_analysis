@@ -2,7 +2,7 @@ from tweepy import Stream
 from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
 import json
-import sentiment_mod as s
+from JSON_RPC import sentiment_mod as s
 
 # consumer key, consumer secret, access token, access secret.
 ckey = "TscHeuS3vQN7bY82vNhE419ka"

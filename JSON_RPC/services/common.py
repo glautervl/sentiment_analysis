@@ -3,7 +3,7 @@ import os.path
 
 from aiohttp import web
 
-from services import registry
+from JSON_RPC.services import registry
 
 
 def common_parser(script_name):

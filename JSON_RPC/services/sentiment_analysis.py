@@ -1,5 +1,4 @@
 import sys
-import sentiment_mod as sent_mod
 import os
 import logging
 import base64
@@ -8,7 +7,7 @@ from aiohttp import web
 from jsonrpcserver.aio import methods
 from jsonrpcserver.exceptions import InvalidParams
 
-import services.common
+from JSON_RPC import sentiment_mod as sent_mod
 
 logging.basicConfig(level=10, format="%(asctime)s - [%(levelname)8s] - %(name)s - %(message)s")
 log = logging.getLogger('Log: sentiment_analysis')
@@ -254,6 +253,6 @@ if __name__ == '__main__':
     '''
     Runs the JSON-RPC server to communicate with the Snet Daemon.
     '''
-    parser = services.common.common_parser(__file__)
+    parser = JSON_RPC.services.common.common_parser(__file__)
     args = parser.parse_args(sys.argv[1:])
-    services.common.main_loop(json_rpc_handle, args)
+    JSON_RPC.services.common.main_loop(json_rpc_handle, args)
