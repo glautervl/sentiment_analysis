@@ -89,11 +89,13 @@ word_features = list(all_words.keys())[:5000]
 save_documents = open("models/documents.pickle", "wb")
 pickle.dump(documents, save_documents)
 save_documents.close()
+print("SAVED WITH SUCCESS:  documents.pickle")
 
 # Saving word features references
 save_word_features = open("models/word_features5k.pickle", "wb")
 pickle.dump(word_features, save_word_features)
 save_word_features.close()
+print("SAVED WITH SUCCESS:  word_features5k.pickle")
 
 
 # Find features function
@@ -137,6 +139,7 @@ print("MNB_classifier accuracy percent:", (nltk.classify.accuracy(MNB_classifier
 save_classifier = open("models/MNB_classifier5k.pickle", "wb")
 pickle.dump(MNB_classifier, save_classifier)
 save_classifier.close()
+print("SAVED WITH SUCCESS:  MNB_classifier5k.pickle")
 
 # Trainning the classifier
 BernoulliNB_classifier = SklearnClassifier(BernoulliNB())
@@ -147,6 +150,7 @@ print("BernoulliNB_classifier accuracy percent:", (nltk.classify.accuracy(Bernou
 save_classifier = open("models/BernoulliNB_classifier5k.pickle", "wb")
 pickle.dump(BernoulliNB_classifier, save_classifier)
 save_classifier.close()
+print("SAVED WITH SUCCESS:  BernoulliNB_classifier5k.pickle")
 
 # Trainning the classifier
 LogisticRegression_classifier = SklearnClassifier(LogisticRegression())
@@ -158,6 +162,7 @@ print("LogisticRegression_classifier accuracy percent:",
 save_classifier = open("models/LogisticRegression_classifier5k.pickle", "wb")
 pickle.dump(LogisticRegression_classifier, save_classifier)
 save_classifier.close()
+print("SAVED WITH SUCCESS:  LogisticRegression_classifier5k.pickle")
 
 # Trainning the classifier
 LinearSVC_classifier = SklearnClassifier(LinearSVC())
@@ -168,6 +173,7 @@ print("LinearSVC_classifier accuracy percent:", (nltk.classify.accuracy(LinearSV
 save_classifier = open("models/LinearSVC_classifier5k.pickle", "wb")
 pickle.dump(LinearSVC_classifier, save_classifier)
 save_classifier.close()
+print("SAVED WITH SUCCESS:  LinearSVC_classifier5k.pickle")
 
 # Trainning the classifier ####
 NuSVC_classifier = SklearnClassifier(NuSVC())
@@ -178,6 +184,7 @@ print("NuSVC_classifier accuracy percent:", (nltk.classify.accuracy(NuSVC_classi
 save_classifier = open("models/NuSVC_classifier5k.pickle", "wb")
 pickle.dump(NuSVC_classifier, save_classifier)
 save_classifier.close()
+print("SAVED WITH SUCCESS:  NuSVC_classifier5k.pickle")
 
 
 # Trainning the classifier
@@ -189,5 +196,6 @@ print("SGDClassifier accuracy percent:", nltk.classify.accuracy(SGDC_classifier,
 save_classifier = open("models/SGDC_classifier5k.pickle", "wb")
 pickle.dump(SGDC_classifier, save_classifier)
 save_classifier.close()
+print("SAVED WITH SUCCESS:  SGDC_classifier5k.pickle")
 
 print("ALL CLASSIFIERS SAVED WITH SUCCESS")
