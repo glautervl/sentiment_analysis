@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dfc891f-83b9-434e-9029-649602057b8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/config/snetd_sentiment_analysis_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/config/snetd_sentiment_analysis_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/corpus/imdb/corpus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/corpus/imdb/corpus.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/corpus/imdb/neg/corpus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/corpus/imdb/neg/corpus.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/corpus/imdb/pos/corpus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/corpus/imdb/pos/corpus.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/input/input" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/input/input" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/models/BernoulliNB_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/models/BernoulliNB_classifier5k.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/models/LinearSVC_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/models/LinearSVC_classifier5k.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/models/LogisticRegression_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/models/LogisticRegression_classifier5k.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/models/MNB_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/models/MNB_classifier5k.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/models/NuSVC_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/models/NuSVC_classifier5k.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/models/SGDC_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/models/SGDC_classifier5k.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/models/documents.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/models/documents.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/models/dumpfile" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/models/dumpfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/models/originalnaivebayes5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/models/originalnaivebayes5k.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/models/word_features5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/models/word_features5k.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/output/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/output/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/output/twitter-out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/output/twitter-out.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/rest/input_test.request" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/rest/input_test.request" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/sentiment_mod.py" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/sentiment_mod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/services/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/services/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/services/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/services/sentiment_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/services/sentiment_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/teste.md" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/teste.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/train_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/train_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSON_RPC/twitter_live_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/JSON_RPC_BK/twitter_live_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/train_mod.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/modules/train_mod.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +29,7 @@
           <entry key="input" value="1" />
           <entry key="json" value="3" />
           <entry key="proto" value="6" />
-          <entry key="py" value="63" />
+          <entry key="py" value="66" />
           <entry key="sh" value="5" />
           <entry key="txt" value="6" />
         </counts>
@@ -72,91 +40,37 @@
           <entry key="JSON" value="3" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="PROTO" value="4" />
-          <entry key="Python" value="63" />
+          <entry key="Python" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="34" />
+          <entry key="dummy" value="40" />
           <entry key="json" value="4" />
           <entry key="proto" value="331" />
-          <entry key="py" value="657" />
+          <entry key="py" value="660" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="4" />
-          <entry key="PLAIN_TEXT" value="49" />
+          <entry key="PLAIN_TEXT" value="55" />
           <entry key="PROTO" value="327" />
-          <entry key="Python" value="657" />
+          <entry key="Python" value="660" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/model/sentiment_analysis_rpc.proto">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/sentiment_analysis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/service/module/complex_mod.py">
+        <entry file="file://$PROJECT_DIR$/service/modules/train_mod.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/train_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
+            <state relative-caret-position="184">
+              <caret line="88" column="22" lean-forward="true" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JSON_RPC_BK/services/sentiment_analysis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-104">
-              <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -202,6 +116,7 @@
         <option value="$PROJECT_DIR$/service/twitter_live_analysis.py" />
         <option value="$PROJECT_DIR$/service/sentiment_analysis.py" />
         <option value="$PROJECT_DIR$/service/module/complex_mod.py" />
+        <option value="$PROJECT_DIR$/service/modules/train_mod.py" />
       </list>
     </option>
   </component>
@@ -240,14 +155,7 @@
               <item name="sentiment_analysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="sentiment_analysis" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sentiment_analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sentiment_analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -478,9 +386,6 @@
     <entry file="file://$PROJECT_DIR$/JSON_RPC_BK/input/input">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/common.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/model/sentiment_analysis_rpc_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-284">
@@ -506,7 +411,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/module/twitter_mod.py">
+    <entry file="file://$PROJECT_DIR$/service/modules/twitter_mod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
@@ -550,22 +455,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/train_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/module/complex_mod.py">
+    <entry file="file://$PROJECT_DIR$/service/modules/complex_mod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/common.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/modules/train_mod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="88" column="22" lean-forward="true" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

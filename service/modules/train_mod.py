@@ -84,12 +84,12 @@ all_words = nltk.FreqDist(all_words)
 word_features = list(all_words.keys())[:5000]
 
 # Saving document reference
-save_documents = open("module/models/documents.pickle", "wb")
+save_documents = open("models/documents.pickle", "wb")
 pickle.dump(documents, save_documents)
 save_documents.close()
 
 # Saving word features references
-save_word_features = open("module/models/word_features5k.pickle", "wb")
+save_word_features = open("models/word_features5k.pickle", "wb")
 pickle.dump(word_features, save_word_features)
 save_word_features.close()
 
@@ -102,6 +102,7 @@ def find_features(document):
         features[w] = (w in words)
 
     return features
+
 
 # Setting featuresets
 featuresets = [(find_features(rev), category) for (rev, category) in documents]
