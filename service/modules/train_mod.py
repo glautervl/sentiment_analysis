@@ -129,6 +129,7 @@ classifier.show_most_informative_features(15)
 save_classifier = open("models/NaiveBayes_classifier5k.pickle", "wb")
 pickle.dump(classifier, save_classifier)
 save_classifier.close()
+print("SAVED WITH SUCCESS:  NaiveBayes_classifier5k.pickle")
 
 # Trainning the classifier
 MNB_classifier = SklearnClassifier(MultinomialNB())
@@ -185,7 +186,6 @@ save_classifier = open("models/NuSVC_classifier5k.pickle", "wb")
 pickle.dump(NuSVC_classifier, save_classifier)
 save_classifier.close()
 print("SAVED WITH SUCCESS:  NuSVC_classifier5k.pickle")
-
 
 # Trainning the classifier
 SGDC_classifier = SklearnClassifier(SGDClassifier())
