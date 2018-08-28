@@ -11,7 +11,7 @@ atoken = "91892303-CUT4ZuJTqAxX2Ra2Bj7g1Hw0WmRPRtaiCPW2qm8CD"
 asecret = "SK7TVAL4QC9O93rhiyv1W4vLJUP0tUMWnjLbO7GkQ0IvE"
 
 
-class listener(StreamListener):
+class Listener(StreamListener):
 
     def on_data(self, data):
         all_data = json.loads(data)
@@ -28,13 +28,23 @@ class listener(StreamListener):
 
         return True
 
-    def on_error(self, status):
-        print(status)
+    def on_error(self, status_code):
+        print("ERROR")
+        print(status_code)
+        if status_code == 420:
+            # returning False in on_data disconnects the stream
+            return False
 
 
-def analyze(language,sentence):
+def analyze(languages, sentences):
+
+    print('MOD => Language')
+    print(languages)
+    print('MOD => Sentences')
+    print(sentences)
+
     auth = OAuthHandler(ckey, csecret)
     auth.set_access_token(atoken, asecret)
 
-    twitterStream = Stream(auth, listener())
-    twitterStream.filter(languages=["pt"], track=["Ivete Sangalo"])
+    twitterStream = Stream(auth, Listener())
+    twitterStream.filter(languages=languages, track=sentences)

@@ -13,6 +13,7 @@ class VoteClassifier(ClassifierI):
     def __init__(self, *classifiers):
         self._classifiers = classifiers
 
+    # Iterate all classifiers
     def classify(self, features):
         votes = []
         for c in self._classifiers:
@@ -20,11 +21,9 @@ class VoteClassifier(ClassifierI):
             votes.append(v)
         return mode(votes)
 
+    # Calculate the confidence of the result
     def confidence(self, features):
-
-        # print("FEATURES")
         # print(str(features))
-
         votes = []
         for c in self._classifiers:
             v = c.classify(features)
@@ -39,12 +38,13 @@ class VoteClassifier(ClassifierI):
         print("")
         print("=========================================================================")
         print("")
+
         total_of_winner_votes = votes.count(mode(votes))
         conf = total_of_winner_votes / len(votes)
         return conf
 
 
-# word_features5k_f = open("models/word_features5k.pickle", "rb")
+# Fetching word features
 word_features5k_f = open(os.path.join(current_path, "models/word_features5k.pickle"), "rb")
 word_features = pickle.load(word_features5k_f)
 word_features5k_f.close()

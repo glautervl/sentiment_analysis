@@ -1,7 +1,6 @@
 import sys
 import base64
 import logging
-import os
 import grpc
 import concurrent.futures as futures
 import service.common
@@ -233,12 +232,14 @@ class TwitterAnalysisServicer(grpc_bt_grpc.TwitterAnalysisServicer):
     # context: object that provides RPC-specific information (timeout, etc).
     def twitterAnalysis(self, request, context):
         # In our case, request is a InputMessage() object (from .proto file)
-        self.value = request.value
+        self.languages = request.languages
+        self.sentences = request.sentences
 
         # To respond we need to create a OutputMessage() object (from .proto file)
         self.result = OutputMessage()
 
-        self.result.value = self.value
+        self.result.value = twitter_mod.analyze(self.languages, self.sentences)
+
         # log.debug('add({},{})={}'.format(self.a, self.b, self.result.value))
         return self.result
 

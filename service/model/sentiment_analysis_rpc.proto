@@ -1,5 +1,9 @@
 syntax = "proto3";
 
+service ShowMessage {
+    rpc show(InputMessage) returns (OutputMessage) {}
+}
+
 message InputMessage {
     string value = 1;
 }
@@ -8,8 +12,13 @@ message OutputMessage {
     string value = 1;
 }
 
-service ShowMessage {
-    rpc show(InputMessage) returns (OutputMessage) {}
+message TwitterInputMessage {
+    string languages = 1;
+    string sentences = 2;
+}
+
+message TwitterOutputMessage {
+    string value = 1;
 }
 
 service SentimentIntensityAnalysis {
@@ -25,7 +34,7 @@ service CustomCorpusAnalysis {
 }
 
 service TwitterAnalysis {
-    rpc twitterAnalysis(InputMessage) returns (OutputMessage) {}
+    rpc twitterAnalysis(TwitterInputMessage) returns (OutputMessage) {}
 }
 
 service TrainData {

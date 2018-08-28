@@ -184,7 +184,7 @@ class TwitterAnalysisStub(object):
     """
     self.twitterAnalysis = channel.unary_unary(
         '/TwitterAnalysis/twitterAnalysis',
-        request_serializer=service_dot_model_dot_sentiment__analysis__rpc__pb2.InputMessage.SerializeToString,
+        request_serializer=service_dot_model_dot_sentiment__analysis__rpc__pb2.TwitterInputMessage.SerializeToString,
         response_deserializer=service_dot_model_dot_sentiment__analysis__rpc__pb2.OutputMessage.FromString,
         )
 
@@ -205,7 +205,7 @@ def add_TwitterAnalysisServicer_to_server(servicer, server):
   rpc_method_handlers = {
       'twitterAnalysis': grpc.unary_unary_rpc_method_handler(
           servicer.twitterAnalysis,
-          request_deserializer=service_dot_model_dot_sentiment__analysis__rpc__pb2.InputMessage.FromString,
+          request_deserializer=service_dot_model_dot_sentiment__analysis__rpc__pb2.TwitterInputMessage.FromString,
           response_serializer=service_dot_model_dot_sentiment__analysis__rpc__pb2.OutputMessage.SerializeToString,
       ),
   }

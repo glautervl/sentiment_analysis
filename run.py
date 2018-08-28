@@ -22,6 +22,9 @@ def main():
                         )
     args = parser.parse_args(sys.argv[1:])
 
+    if args.daemon_config_path is None:
+        args.daemon_config_path = 'config/'
+
     root_path = pathlib.Path(__file__).absolute().parent
 
     # All services modules go here

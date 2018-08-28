@@ -3,10 +3,8 @@ import grpc
 # import the generated classes
 import service.model.sentiment_analysis_rpc_pb2_grpc as grpc_bt_grpc
 import service.model.sentiment_analysis_rpc_pb2 as grpc_bt_pb2
-
-from service import registry
-
 from tests_data import b64_sentences
+from service import registry
 
 if __name__ == '__main__':
 
@@ -16,7 +14,6 @@ if __name__ == '__main__':
         endpoint = 'localhost:{}'.format(registry['sentiment_analysis']['grpc'])
         # Open a gRPC channel
         channel = grpc.insecure_channel('{}'.format(endpoint))
-
 
         # ShowMessage() Method Test
         # create a stub (client)
@@ -62,16 +59,17 @@ if __name__ == '__main__':
         # print("CustomCorpusAnalysis() Method Test Passed => " + response.value)
         # print()
 
-        # # TwitterAnalysis() Method Test
-        # # create a stub (client)
-        # stub = grpc_bt_grpc.TwitterAnalysisStub(channel)
-        # # create a valid request message
-        # test_text = "RODANDO TESTES..."
-        # message = grpc_bt_pb2.InputMessage(value=test_text)
-        # # make the call
-        # response = stub.show(message)
-        # print("TwitterAnalysis() Method Test Passed => " + response.value)
-        # print()
+        # TwitterAnalysis() Method Test
+        # create a stub (client)
+        stub = grpc_bt_grpc.TwitterAnalysisStub(channel)
+        # create a valid request message
+        languages = 'pt'
+        sentences = 'Lula presidente'
+        message = grpc_bt_pb2.TwitterInputMessage(languages=languages, sentences=sentences)
+        # make the call
+        response = stub.twitterAnalysis(message)
+        print("TwitterAnalysis() Method Test Passed => " + response.value)
+        print()
 
     except Exception as e:
         print(e)

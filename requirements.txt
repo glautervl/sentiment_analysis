@@ -3,3 +3,5 @@ grpcio-tools==1.12.1
 nltk
 tweepy
 scikit-learn
+numpy
+scipy
