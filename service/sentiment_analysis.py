@@ -53,7 +53,7 @@ class ShowMessageServicer(grpc_bt_grpc.ShowMessageServicer):
 
     def __init__(self):
         # Just for debugging purpose.
-        log.debug("AdditionServicer created")
+        log.debug("ShowMessageServicer created")
 
     # The method that will be exposed to the snet-cli call command.
     # request: incoming data
@@ -88,41 +88,25 @@ class SentimentIntensityAnalysisServicer(grpc_bt_grpc.SentimentIntensityAnalysis
 
         analizer = SentimentIntensityAnalyzer()
 
-        # Read parameter "data"
-        inputData = request.value
-
-        text = base64.b64decode(inputData)
+        text = base64.b64decode(self.value)
         # Decode do string
         temp = text.decode('utf-8')
         # Convert in array
         tempArray = temp.split("\n")
-        # Declare new array of sentences
-        tempDatabase = []
+        # Result of sentences
+        stringResult = ''
 
-        # Generating temp database
+        # Generating result
         for line in tempArray:
             if line is not None:
                 if len(line) > 1:
-                    tempDatabase.append(line)
+                    stringResult += line
+                    stringResult += '\n'
+                    stringResult += str(analizer.polarity_scores(line))
+                    stringResult += '\n\n'
 
-        # Generate output file
-        file = open("./output/output.txt", "w")
-
-        for line in tempDatabase:
-            if line is not None:
-                if len(line) > 1:
-                    file.write(line)
-                    file.write("\n")
-                    print(str(analizer.polarity_scores(line)))
-                    file.write(str(analizer.polarity_scores(line)))
-                    file.write("\n\n")
-
-        file.close()
-
-        # Reading file
-        fo = open("./output/output.txt", "r")
-        resultBase64 = base64.b64encode(str(fo.read()).encode('utf-8'))
-        fo.close()
+        # Encoding result
+        resultBase64 = base64.b64encode(str(stringResult).encode('utf-8'))
 
         # To respond we need to create a OutputMessage() object (from .proto file)
         self.result = OutputMessage()
@@ -137,7 +121,7 @@ class SentimentComplexAnalysisServicer(grpc_bt_grpc.SentimentComplexAnalysisServ
 
     def __init__(self):
         # Just for debugging purpose.
-        log.debug("AdditionServicer created")
+        log.debug("SentimentComplexAnalysisServicer created")
 
     # The method that will be exposed to the snet-cli call command.
     # request: incoming data
@@ -146,44 +130,27 @@ class SentimentComplexAnalysisServicer(grpc_bt_grpc.SentimentComplexAnalysisServ
         # In our case, request is a InputMessage() object (from .proto file)
         self.value = request.value
 
-        # Read parameter "data"
-        inputData = request.value
+        analizer = SentimentIntensityAnalyzer()
 
-        text = base64.b64decode(inputData)
-
+        text = base64.b64decode(self.value)
         # Decode do string
         temp = text.decode('utf-8')
-
         # Convert in array
         tempArray = temp.split("\n")
+        # Result of sentences
+        stringResult = ''
 
-        # Declare new array of sentences
-        tempDatabase = []
-
-        # Generating temp database
+        # Generating result
         for line in tempArray:
             if line is not None:
                 if len(line) > 1:
-                    tempDatabase.append(line)
+                    stringResult += line
+                    stringResult += '\n'
+                    stringResult += str(complex_mod.sentiment(line))
+                    stringResult += '\n\n'
 
-        # Generate output file
-        file = open("./output/output.txt", "w")
-
-        for line in tempDatabase:
-            if line is not None:
-                if len(line) > 1:
-                    file.write(line)
-                    file.write("\n")
-                    # print(str(sent_mod.sentiment(line)))
-                    file.write(str(complex_mod.sentiment(line)))
-                    file.write("\n\n")
-
-        file.close()
-
-        # Reading file
-        fo = open("./output/output.txt", "r")
-        resultBase64 = base64.b64encode(str(fo.read()).encode('utf-8'))
-        fo.close()
+        # Encoding result
+        resultBase64 = base64.b64encode(str(stringResult).encode('utf-8'))
 
         # To respond we need to create a OutputMessage() object (from .proto file)
         self.result = OutputMessage()
@@ -198,7 +165,7 @@ class CustomCorpusAnalysisServicer(grpc_bt_grpc.ShowMessageServicer):
 
     def __init__(self):
         # Just for debugging purpose.
-        log.debug("AdditionServicer created")
+        log.debug("CustomCorpusAnalysisServicer created")
 
     # The method that will be exposed to the snet-cli call command.
     # request: incoming data
@@ -259,7 +226,7 @@ class TwitterAnalysisServicer(grpc_bt_grpc.TwitterAnalysisServicer):
 
     def __init__(self):
         # Just for debugging purpose.
-        log.debug("AdditionServicer created")
+        log.debug("TwitterAnalysisServicer created")
 
     # The method that will be exposed to the snet-cli call command.
     # request: incoming data

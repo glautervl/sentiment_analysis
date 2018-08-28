@@ -2,7 +2,7 @@ from tweepy import Stream
 from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
 import json
-from JSON_RPC import sentiment_mod as s
+from service.modules import complex_mod
 
 # consumer key, consumer secret, access token, access secret.
 ckey = "TscHeuS3vQN7bY82vNhE419ka"
@@ -17,7 +17,7 @@ class listener(StreamListener):
         all_data = json.loads(data)
 
         tweet = all_data["text"]
-        sentiment_value, confidence = s.sentiment(tweet)
+        sentiment_value, confidence = complex_mod.sentiment(tweet)
         print(tweet, sentiment_value, confidence)
 
         if confidence * 100 >= 80:
