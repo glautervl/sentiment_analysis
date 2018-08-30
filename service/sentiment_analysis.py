@@ -129,8 +129,6 @@ class SentimentComplexAnalysisServicer(grpc_bt_grpc.SentimentComplexAnalysisServ
         # In our case, request is a InputMessage() object (from .proto file)
         self.value = request.value
 
-        analizer = SentimentIntensityAnalyzer()
-
         text = base64.b64decode(self.value)
         # Decode do string
         temp = text.decode('utf-8')

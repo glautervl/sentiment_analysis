@@ -5,3 +5,4 @@ tweepy
 scikit-learn
 numpy
 scipy
+twython

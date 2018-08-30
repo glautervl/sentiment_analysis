@@ -26,6 +26,11 @@ if __name__ == '__main__':
         print("ShowMessage() Method Test Passed => " + response.value)
         print()
 
+    except Exception as e:
+        print(e)
+
+    try:
+
         # SentimentIntensityAnalysis() Method Test
         # create a stub (client)
         stub = grpc_bt_grpc.SentimentIntensityAnalysisStub(channel)
@@ -36,6 +41,11 @@ if __name__ == '__main__':
         response = stub.intensivityAnalysis(message)
         print("SentimentIntensityAnalysis() Method Test Passed => " + response.value)
         print()
+
+    except Exception as e:
+        print(e)
+
+    try:
 
         # SentimentComplexAnalysis() Method Test
         # create a stub (client)
@@ -48,6 +58,11 @@ if __name__ == '__main__':
         print("SentimentComplexAnalysis() Method Test Passed => " + response.value)
         print()
 
+    except Exception as e:
+        print(e)
+
+    try:
+
         # # CustomCorpusAnalysis() Method Test
         # # create a stub (client)
         # stub = grpc_bt_grpc.CustomCorpusAnalysisStub(channel)
@@ -58,6 +73,11 @@ if __name__ == '__main__':
         # response = stub.show(message)
         # print("CustomCorpusAnalysis() Method Test Passed => " + response.value)
         # print()
+
+    except Exception as e:
+        print(e)
+
+    try:
 
         # TwitterAnalysis() Method Test
         # create a stub (client)
