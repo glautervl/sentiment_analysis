@@ -9,7 +9,8 @@ from service import registry
 if __name__ == '__main__':
 
     try:
-
+        print("ShowMessage() Method Test Starting... ")
+        print()
         # Service ONE - Sentiment Analysis
         endpoint = 'localhost:{}'.format(registry['sentiment_analysis']['grpc'])
         # Open a gRPC channel
@@ -26,11 +27,12 @@ if __name__ == '__main__':
         print("ShowMessage() Method Test Passed => " + response.value)
         print()
 
-    except Exception as e:
+    except KeyError as e:
         print(e)
 
     try:
-
+        print("SentimentIntensityAnalysis() Method Test Starting... ")
+        print()
         # SentimentIntensityAnalysis() Method Test
         # create a stub (client)
         stub = grpc_bt_grpc.SentimentIntensityAnalysisStub(channel)
@@ -42,11 +44,13 @@ if __name__ == '__main__':
         print("SentimentIntensityAnalysis() Method Test Passed => " + response.value)
         print()
 
-    except Exception as e:
+    except KeyError as e:
         print(e)
 
     try:
 
+        print("SentimentComplexAnalysis() Method Test Starting... ")
+        print()
         # SentimentComplexAnalysis() Method Test
         # create a stub (client)
         stub = grpc_bt_grpc.SentimentComplexAnalysisStub(channel)
@@ -58,11 +62,13 @@ if __name__ == '__main__':
         print("SentimentComplexAnalysis() Method Test Passed => " + response.value)
         print()
 
-    except Exception as e:
+    except KeyError as e:
         print(e)
 
     try:
 
+        # print("CustomCorpusAnalysis() Method Test Starting... ")
+        # print()
         # # CustomCorpusAnalysis() Method Test
         # # create a stub (client)
         # stub = grpc_bt_grpc.CustomCorpusAnalysisStub(channel)
@@ -72,24 +78,26 @@ if __name__ == '__main__':
         # # make the call
         # response = stub.show(message)
         # print("CustomCorpusAnalysis() Method Test Passed => " + response.value)
-        # print()
+        print()
 
-    except Exception as e:
+    except KeyError as e:
         print(e)
 
     try:
 
+        # print("TwitterAnalysis() Method Test Starting... ")
+        # print()
         # TwitterAnalysis() Method Test
         # create a stub (client)
-        stub = grpc_bt_grpc.TwitterAnalysisStub(channel)
+        # stub = grpc_bt_grpc.TwitterAnalysisStub(channel)
         # create a valid request message
-        languages = 'pt'
-        sentences = 'Lula presidente'
-        message = grpc_bt_pb2.TwitterInputMessage(languages=languages, sentences=sentences)
+        # languages = 'pt'
+        # sentences = 'Lula presidente'
+        # message = grpc_bt_pb2.TwitterInputMessage(languages=languages, sentences=sentences)
         # make the call
-        response = stub.twitterAnalysis(message)
-        print("TwitterAnalysis() Method Test Passed => " + response.value)
+        # response = stub.twitterAnalysis(message)
+        # print("TwitterAnalysis() Method Test Passed => " + response.value)
         print()
 
-    except Exception as e:
+    except KeyError as e:
         print(e)
