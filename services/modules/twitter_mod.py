@@ -2,7 +2,7 @@ from tweepy import Stream
 from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
 import json
-from service.modules import complex_mod
+from services.modules import complex_mod
 
 # consumer key, consumer secret, access token, access secret.
 ckey = "TscHeuS3vQN7bY82vNhE419ka"

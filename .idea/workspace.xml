@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dfc891f-83b9-434e-9029-649602057b8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db_sentiment_analysis.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildproto.sh" beforeDir="false" afterPath="$PROJECT_DIR$/buildproto.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/corpus/imdb/corpus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/services/corpus/imdb/corpus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/corpus/imdb/neg/corpus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/services/corpus/imdb/neg/corpus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/corpus/imdb/pos/corpus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/services/corpus/imdb/pos/corpus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/model/sentiment_analysis_rpc.proto" beforeDir="false" afterPath="$PROJECT_DIR$/services/model/sentiment_analysis_rpc.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/model/sentiment_analysis_rpc_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/model/sentiment_analysis_rpc_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/model/sentiment_analysis_rpc_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/model/sentiment_analysis_rpc_pb2_grpc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/complex_mod.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/complex_mod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/models/BernoulliNB_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/models/BernoulliNB_classifier5k.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/models/LinearSVC_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/models/LinearSVC_classifier5k.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/models/LogisticRegression_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/models/LogisticRegression_classifier5k.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/models/MNB_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/models/MNB_classifier5k.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/models/NaiveBayes_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/models/NaiveBayes_classifier5k.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/models/NuSVC_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/models/NuSVC_classifier5k.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/models/SGDC_classifier5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/models/SGDC_classifier5k.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/models/documents.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/models/documents.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/models/originalnaivebayes5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/models/originalnaivebayes5k.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/models/word_features5k.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/models/word_features5k.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/train_mod.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/train_mod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/twitter_live_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/twitter_live_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/modules/twitter_mod.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/modules/twitter_mod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/sentiment_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/sentiment_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service.json" beforeDir="false" afterPath="$PROJECT_DIR$/services/service.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,13 +71,13 @@
           <entry key="proto" value="16" />
           <entry key="py" value="122" />
           <entry key="pyi" value="1" />
-          <entry key="sh" value="5" />
+          <entry key="sh" value="6" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="4" />
+          <entry key="Bash" value="5" />
           <entry key="Git file" value="1" />
           <entry key="JSON" value="6" />
           <entry key="PLAIN_TEXT" value="14" />
@@ -66,11 +92,13 @@
           <entry key="json" value="7" />
           <entry key="proto" value="398" />
           <entry key="py" value="4256" />
+          <entry key="sh" value="1" />
           <entry key="txt" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="Bash" value="1" />
           <entry key="JSON" value="7" />
           <entry key="PLAIN_TEXT" value="81" />
           <entry key="PROTO" value="394" />
@@ -82,13 +110,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.py">
+        <entry file="file://$PROJECT_DIR$/buildproto.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -126,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/buildproto.sh" />
         <option value="$PROJECT_DIR$/service/model/basic_tamplate_rpc.proto" />
         <option value="$PROJECT_DIR$/test_call_basic_service.py" />
         <option value="$PROJECT_DIR$/service/train_data.py" />
@@ -150,6 +174,7 @@
         <option value="$PROJECT_DIR$/service/sentiment_analysis.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/buildproto.sh" />
       </list>
     </option>
   </component>
@@ -324,12 +349,12 @@
     <frame x="0" y="22" width="960" height="1058" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35185185" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30610022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32924107" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42586398" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42546585" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39977092" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -353,27 +378,9 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test.py</url>
-          <line>14</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/service/model/basic_tamplate_rpc_pb2.py" />
     <entry file="file://$PROJECT_DIR$/service/model/basic_tamplate_rpc_pb2_grpc.py" />
-    <entry file="file://$PROJECT_DIR$/buildproto.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_call_basic_service.py" />
     <entry file="file://$PROJECT_DIR$/JSON_RPC_BK/output/twitter-out.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -388,35 +395,35 @@
     <entry file="file://$PROJECT_DIR$/JSON_RPC_BK/input/input">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/corpus/imdb/pos/corpus.txt">
+    <entry file="file://$PROJECT_DIR$/services/corpus/imdb/pos/corpus.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="808" lean-forward="true" selection-end-line="4" selection-end-column="808" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/corpus/imdb/neg/corpus.txt">
+    <entry file="file://$PROJECT_DIR$/services/corpus/imdb/neg/corpus.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/model/sentiment_analysis_rpc_pb2_grpc.py">
+    <entry file="file://$PROJECT_DIR$/services/model/sentiment_analysis_rpc_pb2_grpc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="184" column="9" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/model/sentiment_analysis_rpc_pb2.py">
+    <entry file="file://$PROJECT_DIR$/services/model/sentiment_analysis_rpc_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/common.py">
+    <entry file="file://$PROJECT_DIR$/services/common.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config/snetd_sentiment_analysis_config.json">
@@ -426,7 +433,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/service.json">
+    <entry file="file://$PROJECT_DIR$/services/service.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="42" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="42" />
@@ -447,7 +454,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/modules/complex_mod.py">
+    <entry file="file://$PROJECT_DIR$/services/modules/complex_mod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
@@ -457,14 +464,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/modules/train_mod.py">
+    <entry file="file://$PROJECT_DIR$/services/modules/train_mod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
           <caret line="139" column="26" lean-forward="true" selection-start-line="139" selection-start-column="26" selection-end-line="139" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/modules/twitter_mod.py">
+    <entry file="file://$PROJECT_DIR$/services/modules/twitter_mod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
@@ -498,7 +505,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/model/sentiment_analysis_rpc.proto">
+    <entry file="file://$PROJECT_DIR$/services/model/sentiment_analysis_rpc.proto">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
@@ -526,14 +533,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/__init__.py">
+    <entry file="file://$PROJECT_DIR$/services/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/sentiment_analysis.py">
+    <entry file="file://$PROJECT_DIR$/services/sentiment_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
           <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
@@ -559,11 +566,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buildproto.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>

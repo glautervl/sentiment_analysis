@@ -3,15 +3,15 @@ import base64
 import logging
 import grpc
 import concurrent.futures as futures
-import service.common
+import services.common
 from nltk.sentiment import SentimentIntensityAnalyzer
-from service.modules import complex_mod
-from service.modules import twitter_mod
+from services.modules import complex_mod
+from services.modules import twitter_mod
 
 
 # Importing the generated codes from buildproto.sh
-import service.model.sentiment_analysis_rpc_pb2_grpc as grpc_bt_grpc
-from service.model.sentiment_analysis_rpc_pb2 import OutputMessage
+import services.model.sentiment_analysis_rpc_pb2_grpc as grpc_bt_grpc
+from services.model.sentiment_analysis_rpc_pb2 import OutputMessage
 
 logging.basicConfig(
     level=10, format="%(asctime)s - [%(levelname)8s] - %(name)s - %(message)s")
@@ -19,7 +19,7 @@ log = logging.getLogger('sentiment_analysis')
 
 
 '''
-Simple arithmetic service to test the Snet Daemon (gRPC), dApp and/or Snet-CLI.
+Simple arithmetic services to test the Snet Daemon (gRPC), dApp and/or Snet-CLI.
 The user must provide the method (arithmetic operation) and
 two numeric inputs: "a" and "b".
 
@@ -39,7 +39,7 @@ Signing job...
 
 Read call params from cmdline...
 
-Calling service...
+Calling services...
 
     response:
         value: 924.0
@@ -265,6 +265,6 @@ if __name__ == '__main__':
     '''
     Runs the gRPC server to communicate with the Snet Daemon.
     '''
-    parser = service.common.common_parser(__file__)
+    parser = services.common.common_parser(__file__)
     args = parser.parse_args(sys.argv[1:])
-    service.common.main_loop(serve, args)
+    services.common.main_loop(serve, args)

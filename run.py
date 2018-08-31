@@ -7,7 +7,7 @@ import argparse
 import logging
 import threading
 
-from service import registry
+from services import registry
 
 logging.basicConfig(
     level=10, format="%(asctime)s - [%(levelname)8s] - %(name)s - %(message)s")
@@ -29,7 +29,7 @@ def main():
 
     # All services modules go here
     service_modules = [
-        'service.sentiment_analysis'
+        'services.sentiment_analysis'
     ]
 
     # Removing all previous snetd .db file
@@ -52,7 +52,7 @@ def start_all_services(cwd, service_modules, config_path=None):
     Loop through all service_modules and start them.
     For each one, an instance of Daemon 'snetd' is created.
     snetd will start with configs from 'snet_SERVICENAME_config.json'
-    and will create a 'db_SERVICENAME.db' database file for each service.
+    and will create a 'db_SERVICENAME.db' database file for each services.
     '''
     try:
         for i, service_module in enumerate(service_modules):
@@ -82,8 +82,8 @@ def start_all_services(cwd, service_modules, config_path=None):
 
 def start_service(cwd, service_module, daemon_config_file=None):
     '''
-    Starts the python module of the service at the passed gRPC port and
-    an instance of 'snetd' for the service.
+    Starts the python module of the services at the passed gRPC port and
+    an instance of 'snetd' for the services.
     '''
     service_name = service_module.split('.')[-1]
     grpc_port = registry[service_name]['grpc']

@@ -1,10 +1,10 @@
 import grpc
 
 # import the generated classes
-import service.model.sentiment_analysis_rpc_pb2_grpc as grpc_bt_grpc
-import service.model.sentiment_analysis_rpc_pb2 as grpc_bt_pb2
+import services.model.sentiment_analysis_rpc_pb2_grpc as grpc_bt_grpc
+import services.model.sentiment_analysis_rpc_pb2 as grpc_bt_pb2
 from tests_data import b64_sentences
-from service import registry
+from services import registry
 
 if __name__ == '__main__':
 
