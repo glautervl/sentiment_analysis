@@ -64,7 +64,7 @@ class ShowMessageServicer(grpc_bt_grpc.ShowMessageServicer):
         # To respond we need to create a OutputMessage() object (from .proto file)
         self.result = OutputMessage()
 
-        self.result.value = self.value
+        self.result.value = "Processed => " + self.value
         # log.debug('add({},{})={}'.format(self.a, self.b, self.result.value))
         return self.result
 
