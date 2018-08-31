@@ -1,14 +1,20 @@
 {
     "name": "sentiment_analysis",
     "model": "model/",
-    "organization": "SNET_BH",
+    "organization": "SNET_BR",
     "path": "",
-    "price": 100,
+    "price": 0,
     "endpoint": "http://54.203.198.53:7010",
     "tags": [
-        "Sentiment_Analysis,NLTK"
+        "Sentiment",
+        "Analysis"
     ],
     "metadata": {
-        "description": "Sentiment Analysis Beta"
+        "description": "Sentiment Analysis"
+    },
+    "networks": {
+        "42": {
+            "agentAddress": "0xF0837138eD7a35460a000A8386c6Ea5cdEDdDDD3"
+        }
     }
 }
